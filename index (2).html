@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="./Document_files/font-awesome.min.css">
+    <link type="text/javascript" href="js/bootstrap.min.js">
+    <link type="text/javascript" href="script.js">
+</head>
+<body>
+    
+   
+   <div class="backgr">
+    <img src="img/01.png">
+   </div>
+   <div class="container">
+        <div class="menubar">
+            <div class="menubar1">
+                <ul>
+                    <li><a href="#"><b>HOME</b></a></li>
+                    <li><a href="#"><b>SERVICE</b></a></li>
+                    <li><a href="#"><B>ABOUT</B></a></li>
+                    <li><a href="#"><b>CONTACT</b></a></li>
+                </ul>
+            </div>
+            <div class="menubar2">
+                <ul>
+                    <li id="sign"><a href="#"><b>SIGN UP</b></A></li>
+                    <li id="sign1"><a href="#"><b>LOG OUT</b></A></li>
+                </ul>
+            </div>
+       </div>
+
+</div>
+
+   <div class="butt1">
+    <input class="input1" type="text" id="inputName" placeholder="Enter Your Name"></br></br>
+    <input class="input2" type="text" id="inputNumber" placeholder="Enter Your Aadhar"></br></br>
+    <button onclick="checkInput()" class="buttz">Submit</button>
+    <div id="imageContainer" style="display: none;">
+    <img id="outputImage" src="02.jpg">
+    <div class="butt">
+        <button4 onclick="showNextImage1()" ><a id="button3" href="service.html" >back</a></button>
+        <button3 onclick="showNextImage()" > <a id="button3" href="service.html">Next</a></button>
+    </div>
+    </div>
+   </div>
+       
+    <script>
+        var imagePaths = [
+      "img/02.jpg",
+    ];
+    var currentImageIndex = 0;
+    
+    function checkInput() {
+      var inputNumber = document.getElementById("inputNumber").value;
+      var inputName = document.getElementById("inputName").value;
+      var imageContainer = document.getElementById("imageContainer");
+    
+      if (inputNumber === "536377363" && inputName === "kushal") {
+        var outputImage = document.getElementById("outputImage");
+        outputImage.src = imagePaths[currentImageIndex];
+        imageContainer.style.display = "block";
+      } else {
+        alert("Please enter the proper number and name.");
+      }
+    }
+    
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+      var outputImage = document.getElementById("outputImage");
+      outputImage.src = imagePaths[currentImageIndex];
+    }
+    function showNextImage1() {
+      currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+      var outputImage = document.getElementById("outputImage");
+      outputImage.src = imagePaths[currentImageIndex];
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <div class="input">
+    <input type="text" id="inputName">
+    <input type="text" id="inputNumber">
+    <button onclick="checkInput()">Click me</button>
+    <img id="outputImage" style="display: none;" src="img/02.jpg">
+    <div class="buttn">
+        <button class="butt" id="nextButton1" style="display: none;">123</button><button  id="nextButton" style="display: none;">Next</button>
+    </div>
+   </div>
+   <script>
+    function checkInput() {
+      var inputNumber = document.getElementById("inputNumber").value;
+      var nextButton = document.getElementById("nextButton");
+      var nextButton1 = document.getElementById("nextButton1");
+    
+       if (inputNumber === "536377363" && inputName.toLowerCase() === "kushal"){
+        nextButton.style.display = "block";
+      }
+    }
+    var imagePaths = [
+      "img/02.jpg",
+    ];
+    var currentImageIndex = 0;
+    
+    function checkInput() {
+      var inputNumber = document.getElementById("inputNumber").value;
+      var outputImage = document.getElementById("outputImage");
+      var nextButton = document.getElementById("nextButton");
+      var nextButton1 = document.getElementById("nextButton1");
+    
+      if (inputNumber === "536377363") {
+        outputImage.src = imagePaths[currentImageIndex];
+        outputImage.style.display = "block";
+        nextButton.style.display = "block";
+        nextButton1.style.display = "block";
+      }
+     else{
+        alert("Please enter the proper number.");
+     }
+    }
+    
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+      var outputImage = document.getElementById("outputImage");
+      outputImage.src = imagePaths[currentImageIndex];
+    }
+    
+     </script> -->
+
+
+    
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Document</title>
+ </head>
+ <body>
+    
+
+   <div class="input">
+    <input type="text" id="inputNumber">
+    <button onclick="checkInput()">Click me</button>
+    <img id="outputImage" style="display: none;" src="img/01.png">
+    <button  id="nextButton" style="display: none;">Next</button>
+   </div>
+    
+
+
+
+ </body>
+ <script>
+function checkInput() {
+  var inputNumber = document.getElementById("inputNumber").value;
+  var nextButton = document.getElementById("nextButton");
+
+  if (inputNumber === "536377363") {
+    nextButton.style.display = "block";
+  }
+}
+var imagePaths = [
+  "img/01.png",
+];
+var currentImageIndex = 0;
+
+function checkInput() {
+  var inputNumber = document.getElementById("inputNumber").value;
+  var outputImage = document.getElementById("outputImage");
+  var nextButton = document.getElementById("nextButton");
+
+  if (inputNumber === "536377363") {
+    outputImage.src = imagePaths[currentImageIndex];
+    outputImage.style.display = "block";
+    nextButton.style.display = "block";
+  }
+}
+
+function showNextImage() {
+  currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+  var outputImage = document.getElementById("outputImage");
+  outputImage.src = imagePaths[currentImageIndex];
+}
+
+ </script>
+ </html> -->
